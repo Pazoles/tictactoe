@@ -154,7 +154,7 @@ class Board
     # tie?
     def tie?
 
-        # is a win still possible?
+        # is the board full?
         @board.all? do |row|
             row.none?(&:nil?)
         end

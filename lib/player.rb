@@ -61,6 +61,7 @@ class Player
 
     def computer_move
 
+        # Simple computer AI - find valid moves in this strategic order
         if @board.board_space_available_silent?([1,1])
             @board.add_move([1,1],@move)
 
@@ -75,6 +76,12 @@ class Player
 
         elsif @board.board_space_available_silent?([0,2])
             @board.add_move([2,1],@move)
+
+        elsif @board.board_space_available_silent?([0,2])
+            @board.add_move([0,2],@move)
+
+        elsif @board.board_space_available_silent?([1,0])
+            @board.add_move([1,0],@move)
 
         elsif @board.board_space_available_silent?([0,2])
             @board.add_move([0,2],@move)

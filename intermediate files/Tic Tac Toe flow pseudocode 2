@@ -1,0 +1,127 @@
+# Game play controls
+class Game
+    # initialize
+        # set up the board
+        # set up the players
+        # ask for player preference
+        # assign starting players
+
+    # play
+        # loop until broken
+            # call the method to render Board
+            # ask player to enter their move
+            # break the loop if the game is over
+            # switch players
+
+    # check_game_over
+        # check_win
+        # check_tie
+
+    # check_win
+        # If three in a row
+            # display win message
+
+    # check_tie
+        # If three in a row is impossible
+            # display tie message
+
+    # switch_players
+        # PlayerX to PlayerO (or reverse)
+
+    # rematch
+        # ask if player wants a new Game
+            # if yes, set up new board
+            # if no, end game
+
+    # rematch_valid?
+        # Unless response is either Y or N
+            # display error message
+end
+
+
+# Player-related functionality
+class Player
+    # initialize
+        # select X or O
+
+    # get_move
+        # loop until broken
+            # ask_for_move
+            # IF validate_move is true
+                # IF piece is placeable
+                    # break the loop
+
+    # ask_for_move
+        # display message asking for get_move
+        # collect player entry from command line
+
+    # validate_move
+        # UNLESS move corresponds to a valid position on the Board
+            # display error message
+
+    # computer_move
+        # get current board
+            # check if human can win next turn
+                # if yes
+                    # try to block
+                # if no
+                    # check if computer can win next turn
+                        # if yes, make winning play
+                        # if no, try to take center or corners
+
+end
+
+
+# The board which players interact with
+class Board
+    # initialize Board
+        # set up the data structure
+
+    # display Board
+        # loop through data structure
+            # display previously placed Xs and Os, else blank
+
+    # add_move
+        # IF move_location_valid?
+            # accept move
+        # ELSE
+            # display error message
+
+    # move_location_valid?
+        # Is it within_board_space?
+        # Is the board_space_available?
+
+    # within_board_space?
+        # UNLESS move corresponds to space on the 3x3 grid
+            # display error message
+
+    # board_space_available?
+        # UNLESS space is not occupied
+            # display error message
+
+    # win_conditions?
+        # win_diagonal?
+        # win_vertical?
+        # win_horizontal?
+
+    # win_diagonal?
+        # check if move has three in a row diagonally
+
+    # win_vertical?
+        # check if move has three in a row vertically
+
+    # win_horizontal?
+        # check if move has three in a row horizontally
+
+    # diagonals
+        # return the diagonal moves
+
+    # verticals
+        # return the vertical moves
+
+    # horizontals
+        # return the horizontal moves
+
+    # tie?
+        # is a win still possible?
+end

@@ -1,0 +1,16 @@
+Create the game [Game]
+    Create a blank 3x3 grid as game board [Board]
+    Create two players [Player]
+    Select choice of symbol [Player]
+    Determine who goes first [Game]
+
+Start the loop to alternate turns [Game]
+    Display the board [Board]
+    Collect players valid move [Player]
+    If win or tie conditions are present [Game]
+        Display message for win or tie, ask for rematch
+        If new game is selected [Player]
+            Create new game [Game]
+            Exit loop
+    Else
+        Continue to the next turn/loop [Game]

@@ -21,5 +21,5 @@ Intermediate files contain a flowchart, pseudocode, and a single file version of
 2. Add increasing difficulty levels to AI, using either preset strategies or by exploring the board to find winning moves.
 3. Add options for 0 or 2 human players.
 4. Recognize when a tie is inevitable, and end the game before the board is full.
-
+5. Add color to highlight winning move and differentiate player markers.
 
